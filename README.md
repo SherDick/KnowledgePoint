@@ -14,4 +14,5 @@
 
 ## sds（安全数据表）
 
-## Token鉴权
+## Token Auth
+[Token认证](https://github.com/SherDick/KnowledgePoint/blob/master/Token.md)
