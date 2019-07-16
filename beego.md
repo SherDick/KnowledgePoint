@@ -11,12 +11,12 @@
 　　beego采用了Go原生的http包来处理请求，goroutine的并发效率应付大流量的Web应用和API的应用。
 
 ## beego架构
-![error](https://gitlab.com/SherDick/KnowledgePoint/raw/master/Pictures/architecture.png)
+![error](https://github.com/SherDick/KnowledgePoint/raw/master/Pictures/architecture.png)
 
 　　beego 是基于八大独立的模块构建的，是一个高度解耦的框架。例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。
 
 ## beego的执行逻辑
-![error](https://gitlab.com/SherDick/KnowledgePoint/raw/master/Pictures/flow.png)
+![error](https://github.com/SherDick/KnowledgePoint/raw/master/Pictures/flow.png)
 
 ## beego项目结构
 M（models 目录）、V（Views 目录）和C（Controllers目录），main.go为入口文件。
