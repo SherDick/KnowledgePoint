@@ -20,3 +20,34 @@
 
 ## beego项目结构
 M（models 目录）、V（Views 目录）和C（Controllers目录），main.go为入口文件。
+
+## 模型（Models） - beego ORM
+Go语言ORM框架。
+### 已支持的数据库驱动
+- MySQL
+- PostgreSQL
+- Sqlite3
+### ORM特性
+- 支持Go的所有类型存储
+- 采用CRUD风格
+- 自动Join关联表
+- 跨数据库兼容查询
+- 允许直接使用SQL查询/映射
+- 严格完整的测试保证 ORM 的稳定与健壮
+
+## View 设计
+### 基本语法
+go 统一使用了 <code>{{</code> 和 <code>}}</code> 作为左右标签，没有其他的标签符号。如果您想要修改为其它符号，可以参考 模板标签。
+
+使用 <code>.</code> 来访问当前位置的上下文
+
+使用 <code>$</code> 来引用当前模板根级的上下文
+
+使用 <code>$var</code> 来访问创建的变量
+### 模板中支持的go语言符号
+```golang
+{{"string"}} // 一般 string
+{{`raw string`}} // 原始 string
+{{'c'}} // byte
+{{print nil}} // nil 也被支持
+```
