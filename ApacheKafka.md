@@ -37,4 +37,4 @@
 - 可以作为并行的单元集
 
 
-#### [Kafka文档](http://kafka.apachecn.org/intro.html)
+#### [Kafka文档](http://kafka.apache.org)
