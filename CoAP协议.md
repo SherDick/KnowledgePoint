@@ -4,7 +4,7 @@
   - [协议模型](#协议模型)
   - [消息类型（Messages）](#消息类型（Messages）)
   - [CoAP消息格式](#CoAP消息格式)
-  - [CoAP块 传输](#CoAP块 传输)
+  - [CoAP块传输](#CoAP块传输)
   - [CoAP的安全性](#CoAP的安全性)
 - [订阅/发布](#订阅/发布)
   - [模型框架](#模型框架)
@@ -21,17 +21,17 @@
 
 ##### CoAP 请求/响应工作模式
 
-![](./pictures/CoAP07.jpeg)
+![](./Pictures/CoAP07.jpeg)
 
 通常由客户端发送CoAP请求，服务器一旦侦听到该请求便会根据请求内容返回响应吗和响应内容。
 
 ### CoAP协议主体内容<a name="CoAP协议主体内容"></a>
 
-![](./pictures/CoAP.Png)
+![](./Pictures/CoAP.Png)
 
 #### 协议模型<a name="协议模型"></a>
 
-![err](./pictures/CoAP01.png)
+![](./Pictures/CoAP01.png)
 
 - 传输层改为UDP
 - 基于REST
@@ -44,18 +44,18 @@
 
 1.  **CON**——需要被确认的请求，如果CON请求被发送，则对方**必须作出响应**。用以**可靠消息传输**。
 
-![](./pictures/CoAP02.jpeg)
+![](./Pictures/CoAP02.jpeg)
 
 2. **NON**——不需要被确认的请求，如果NON请求被发送，则对方不必做出回应。适用于消息会重复频繁的发送，用以**不可靠消息传输**。
 
-   ![](./pictures/CoAP03.jpeg)
+   ![](./Pictures/CoAP03.jpeg)
 
 3. **ACK**——应答消息，对应CON消息的应答。
 4. **RST**——复位消息，可靠消息传输时接收的消息不认识或错误时，不能回ACK消息，必须回RST消息。
 
 #### CoAP消息格式<a name="CoAP消息格式"></a>
 
-![](./pictures/CoAP04.png)
+![](./Pictures/CoAP04.png)
 
 - **消息头（HEAD）**
 
@@ -140,7 +140,7 @@
 
   主要用于描述请求或响应对应的各个属性，
 
-  ![](./pictures/optionnumber.png)
+  ![](./Pictures/optionnumber.png)
 
 - **payload（可选）**
 
@@ -155,19 +155,19 @@
 
 ##### 请求例子（二进制格式），相较HTTP包更小，可双向通信
 
-![](./pictures/CoAP06.png)
+![](./Pictures/CoAP06.png)
 
 #### CoAP的URL
 
 开头为“coap”对应“http”或“coaps”对应“https”。coap默认端口udp（5683），coaps为5684
 
-#### CoAP块 传输<a name="CoAP块 传输"></a>
+#### CoAP块传输<a name="CoAP块传输"></a>
 
 块传输协议在CoAP基础协议上增加了4个options（其中size1最早在RFC7252中定义，RFC7959进行了扩展），2个response codes用于块传输大小协商及控制。
 
 ##### option
 
-![](./pictures/option.png)
+![](./Pictures/option.png)
 
 采用Block1和Size1完成Request中Resource Presentation的块传输。
 
@@ -175,14 +175,14 @@
 
 ##### Response Code
 
-![](./pictures/blockresponse.png)
+![](./Pictures/blockresponse.png)
 
 - Continue：表明Server收到了本次通过Request传输的块，期望Client继续发送下一个块，目前还不能执行该Request，返回最终的Response。
 - Request Entity Incomplete：表明Server由于多种原因：Client未发送所有块了；没有按Server要求的顺序发送块；块发送时间跨度太大导致Server已丢弃块，未能完成body的接收。
 
 ##### block option结构
 
-![](./pictures/option-block-struct.png)
+![](./Pictures/option-block-struct.png)
 
 - NUM：具有给定大小的块序列内的块的相对数（从0开始编号），即快序号
 - M：是否有更多块
@@ -192,7 +192,7 @@
 
 COAP的安全性是用DTLS加密实现的，运行在UDP之上。DTLS的实现需要的资源和带宽较多，如果是资源非常少的终端和极有限的带宽下可能会跑不起来。DTLS仅仅在单播情况下适用。
 
-![](./pictures/CoAP05.jpeg)
+![](./Pictures/CoAP05.jpeg)
 
 ### 订阅/发布<a name="订阅/发布"></a>
 
@@ -200,7 +200,7 @@ MQTT协议基于订阅/发布模型，CoAP协议通过扩展方式简单的实�
 
 #### 模型框架<a name="模型框架"></a>
 
-![](./pictures/observer.png)
+![](./Pictures/observer.png)
 
 - Subject（主题）：代表CoAP服务器上的某resource（资源），该资源状态随时可能发生变化
 - Observer（观察者）：代表某个CoAP资源最新状态感兴趣的客户端CoAP Client
@@ -218,7 +218,7 @@ MQTT协议基于订阅/发布模型，CoAP协议通过扩展方式简单的实�
 
 
 
-![](./pictures/observingex.png)
+![](./Pictures/observingex.png)
 
 1. 客户端向服务器登记感兴趣的Subject /temperature
 2. 当temperature发生状态改变时，服务器主动通知客户端
