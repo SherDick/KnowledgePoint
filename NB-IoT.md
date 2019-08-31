@@ -26,7 +26,7 @@
 
 ### 协议栈与流<a name="协议栈与流"></a>
 
-![](pictures/LTE02.png)
+![](Pictures/LTE02.png)
 
 [NAS协议(非接入层协议)](#NAS协议(非接入层协议))  [RRC层(无线资源控制层)](#RRC层(无线资源控制层))  [PDCP层(分组数据汇聚协议层)](#PDCP层(分组数据汇聚协议层))  
 
@@ -34,7 +34,7 @@
 
 ### 子层运行方式<a name="子层运行方式"></a>
 
-![](pictures/LTE01.png)
+![](Pictures/LTE01.png)
 
 #### NAS协议(非接入层协议)<a name="NAS协议(非接入层协议)"></a>[TOP](#top)
 
@@ -149,7 +149,7 @@ eNB->>UE:12 RRC Connection Release
 
 ### NB-IoT网络架构<a name="NB-IoT网络架构"></a>[TOP](#top)
 
-![](pictures/NB-IoT04.png)
+![](Pictures/NB-IoT04.png)
 
 - **NB-IoT终端**：通过空口连接到基站
 - **eNodeB**：承担空口接入处理，小区管理等相关功能
@@ -161,13 +161,13 @@ eNB->>UE:12 RRC Connection Release
 
 #### CP(控制面)协议栈
 
-![](./pictures/CP.png)
+![](./Pictures/CP.png)
 
 UE与eNodeB传输数据不需要启动安全模式，安全性由NAS层负责；RLC层与RRC层数据直接交互，上行数据在上行RRC消息包含的NAS消息中携带，下行数据同理。
 
 #### UP(用户面)协议栈
 
-![](./pictures/UP.png)
+![](./Pictures/UP.png)
 
 上下行数据通过DRB承载携带，PDCP层提供AS层安全模式
 
@@ -186,7 +186,7 @@ UE与eNodeB传输数据不需要启动安全模式，安全性由NAS层负责；
 
 
 
-![](./pictures/NB-IoT01.png)
+![](./Pictures/NB-IoT01.png)
 
 
 
@@ -281,7 +281,7 @@ eNB->>UE:6 RRC
 - NB-IoT在UP模式中，为减少空口信令交互引入了**Suspend/Resume流程**
 - eNB保存UE、AS上下文信息，UE从RRC连接状态转为Idle状态，终端在Idle（Suspend）状态下，需要传输数据时，可直接通过Resume流程，直接建立RRC连接，节省空口加密，承载建立等信令消息和流程。
 
-![](./pictures/RRCSuspend.png)
+![](./Pictures/RRCSuspend.png)
 
 #### RRC挂起流程<a name="RRC挂起流程"></a>[TOP](#top)
 
