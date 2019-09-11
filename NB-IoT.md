@@ -121,7 +121,8 @@ MAC层给**上层**提供的业务：
 
 ### LTE信令流程<a name="LTE信令流程"></a>
 
-```sequence
+```mermaid
+sequenceDiagram
 participant UE
 participant eNB
 participant EPC
