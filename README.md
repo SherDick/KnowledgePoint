@@ -4,7 +4,7 @@
 #### [Beego框架](https://github.com/SherDick/KnowledgePoint/blob/master/beego.md)
 #### [RESTful](https://github.com/SherDick/KnowledgePoint/blob/master/RESTful.md)
 #### [Kafka](https://github.com/SherDick/KnowledgePoint/blob/master/ApacheKafka.md)
-
+#### [负载均衡介绍](https://github.com/SherDick/KnowledgePoint/blob/master/LoadBalancer.md)
 #### [阿里云对象存储服务OSS](https://github.com/SherDick/KnowledgePoint/blob/master/OSS.md)
 #### 路由
 #### [ORM（对象关系映射）](https://github.com/SherDick/KnowledgePoint/blob/master/ORM.md)
