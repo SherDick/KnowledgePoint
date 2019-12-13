@@ -32,3 +32,8 @@ redis-cli -h 127.0.0.1 -p 6379  keys 'test*' | xargs redis-cli -h 127.0.0.1 -p 6
 > [redis scan命令](http://doc.redisfans.com/key/scan.html)
 
 当有大量数据时，使用keys会导致redis服务器阻塞，命令执行完之前不能进行任何操作。而scan不会阻塞服务器，每一次只返回部分小key。
+
+#### 参考链接
+
+> [链接1](https://juejin.im/post/5d0f3c2be51d45595319e355)
+
