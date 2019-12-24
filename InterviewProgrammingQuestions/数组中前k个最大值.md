@@ -1,5 +1,5 @@
 # 查找数组中前k个最大值
-```
+```C++
 vector<int> GetMaxNumbers(vector<int> input, int k) {
 	if (input.empty() || k <= 0 || input.size() < k) return vector<int>();
 	multiset<int, less<int> > leastNumber;

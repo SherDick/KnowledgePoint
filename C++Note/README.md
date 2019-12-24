@@ -1,1 +1,2 @@
-# C-Note
+# C++Note
+

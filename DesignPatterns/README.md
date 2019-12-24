@@ -40,7 +40,7 @@
 根据两条准则对模式进行分类：
 - 目的准则：模式用来完成什么工作的。
 - 范围准则：模式主要是用于类还是用于对象。
-![test](https://github.com/SherDick/Design-patterns/raw/master/Pictures/PatternClassification.png)
+![test](./Pictures/PatternClassification.png)
 
 
 ## 1. 创建型(Creational	Patterns)
