@@ -21,17 +21,17 @@
 
 ##### CoAP 请求/响应工作模式
 
-![](./Pictures/CoAP07.jpeg)
+![](../Pictures/CoAP07.jpeg)
 
 通常由客户端发送CoAP请求，服务器一旦侦听到该请求便会根据请求内容返回响应吗和响应内容。
 
 ### CoAP协议主体内容<a name="CoAP协议主体内容"></a>
 
-![](./Pictures/CoAP.Png)
+![](../Pictures/CoAP.Png)
 
 #### 协议模型<a name="协议模型"></a>
 
-![](./Pictures/CoAP01.png)
+![](../Pictures/CoAP01.png)
 
 - 传输层改为UDP
 - 基于REST
@@ -44,18 +44,18 @@
 
 1.  **CON**——需要被确认的请求，如果CON请求被发送，则对方**必须作出响应**。用以**可靠消息传输**。
 
-![](./Pictures/CoAP02.jpeg)
+![](../Pictures/CoAP02.jpeg)
 
 2. **NON**——不需要被确认的请求，如果NON请求被发送，则对方不必做出回应。适用于消息会重复频繁的发送，用以**不可靠消息传输**。
 
-   ![](./Pictures/CoAP03.jpeg)
+   ![](../Pictures/CoAP03.jpeg)
 
 3. **ACK**——应答消息，对应CON消息的应答。
 4. **RST**——复位消息，可靠消息传输时接收的消息不认识或错误时，不能回ACK消息，必须回RST消息。
 
 #### CoAP消息格式<a name="CoAP消息格式"></a>
 
-![](./Pictures/CoAP04.png)
+![](../Pictures/CoAP04.png)
 
 - **消息头（HEAD）**
 
@@ -140,7 +140,7 @@
 
   主要用于描述请求或响应对应的各个属性，
 
-  ![](./Pictures/optionnumber.png)
+  ![](../Pictures/optionnumber.png)
 
 - **payload（可选）**
 
@@ -155,7 +155,7 @@
 
 ##### 请求例子（二进制格式），相较HTTP包更小，可双向通信
 
-![](./Pictures/CoAP06.png)
+![](../Pictures/CoAP06.png)
 
 #### CoAP的URL
 
@@ -167,7 +167,7 @@
 
 ##### option
 
-![](./Pictures/option.png)
+![](../Pictures/option.png)
 
 采用Block1和Size1完成Request中Resource Presentation的块传输。
 
@@ -175,14 +175,14 @@
 
 ##### Response Code
 
-![](./Pictures/blockresponse.png)
+![](../Pictures/blockresponse.png)
 
 - Continue：表明Server收到了本次通过Request传输的块，期望Client继续发送下一个块，目前还不能执行该Request，返回最终的Response。
 - Request Entity Incomplete：表明Server由于多种原因：Client未发送所有块了；没有按Server要求的顺序发送块；块发送时间跨度太大导致Server已丢弃块，未能完成body的接收。
 
 ##### block option结构
 
-![](./Pictures/option-block-struct.png)
+![](../Pictures/option-block-struct.png)
 
 - NUM：具有给定大小的块序列内的块的相对数（从0开始编号），即快序号
 - M：是否有更多块
@@ -192,7 +192,7 @@
 
 COAP的安全性是用DTLS加密实现的，运行在UDP之上。DTLS的实现需要的资源和带宽较多，如果是资源非常少的终端和极有限的带宽下可能会跑不起来。DTLS仅仅在单播情况下适用。
 
-![](./Pictures/CoAP05.jpeg)
+![](../Pictures/CoAP05.jpeg)
 
 ### 订阅/发布<a name="订阅/发布"></a>
 
@@ -200,7 +200,7 @@ MQTT协议基于订阅/发布模型，CoAP协议通过扩展方式简单的实�
 
 #### 模型框架<a name="模型框架"></a>
 
-![](./Pictures/observer.png)
+![](../Pictures/observer.png)
 
 - Subject（主题）：代表CoAP服务器上的某resource（资源），该资源状态随时可能发生变化
 - Observer（观察者）：代表某个CoAP资源最新状态感兴趣的客户端CoAP Client
@@ -216,9 +216,7 @@ MQTT协议基于订阅/发布模型，CoAP协议通过扩展方式简单的实�
 
 在Notification中，observe value代表Subject发生变化时，检测到的顺序。
 
-
-
-![](./Pictures/observingex.png)
+![](../Pictures/observingex.png)
 
 1. 客户端向服务器登记感兴趣的Subject /temperature
 2. 当temperature发生状态改变时，服务器主动通知客户端
