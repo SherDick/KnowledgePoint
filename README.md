@@ -32,11 +32,11 @@
 
 > [简介](./DesignPatterns/README.md)
 
-- [抽象工厂模式](./DesignPatterns/Abstract Factory-抽象工厂模式)
+- [抽象工厂模式](./DesignPatterns/AbstractFactory-抽象工厂模式)
 - [生成器](./DesignPatterns/Builder-生成器)
-- [工厂方法模式](./DesignPatterns/Factory Method Pattern-工厂方法模式)
-- [开闭原则](./DesignPatterns/Open Closed Principle-开闭原则)
-- [简单工厂模式](./DesignPatterns/Simple Factory Pattern-简单工厂模式)
+- [工厂方法模式](./DesignPatterns/FactoryMethodPattern-工厂方法模式)
+- [开闭原则](./DesignPatterns/OpenClosedPrinciple-开闭原则)
+- [简单工厂模式](./DesignPatterns/SimpleFactoryPattern-简单工厂模式)
 - [单例模式](./DesignPatterns/Singleton-单例模式)
 
 ### - GolangNote
@@ -44,7 +44,7 @@
 > [语言特性](./GolangNote/README.md)
 
 - [并发](./GolangNote/Concurrency-并发)
-- [控制结构](./GolangNote/Control structures-控制结构)
+- [控制结构](./GolangNote/ControlStructures-控制结构)
 - [函数与方法](./GolangNote/FunctionAndMethod-函数与方法)
 - [接口](./GolangNote/Interface-接口)
 
